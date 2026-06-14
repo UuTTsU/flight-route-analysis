@@ -48,11 +48,3 @@ plt.xticks(rotation=0)
 plt.tight_layout()
 plt.savefig("stops_distribution.png")
 plt.show()
-
-# --- Summary stats to include in your README ---
-print("=== Dataset Summary ===")
-print(f"Total routes: {len(df)}")
-print(f"Unique airlines: {df['airline'].nunique()}")
-print(f"Unique airports: {df['src_airport'].nunique()}")
-print(f"Routes with stops: {(df['stops'] > 0).sum()}")
-print(f"Direct routes: {(df['stops'] == 0).sum()}")
